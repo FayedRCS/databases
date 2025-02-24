@@ -13,7 +13,10 @@ CREATE TABLE users (
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
     is_admin BOOLEAN,
-    bank_id INTEGER
+    bank_id INTEGER,
+    CONSTRAINT fk_banks
+    FOREIGN KEY (bank_id)
+    REFERENCES banks(id)
 );
 
 -- TEST SUITE, DON'T TOUCH BELOW THIS LINE --
