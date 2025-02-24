@@ -1,0 +1,10 @@
+CREATE TABLE banks(
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  location TEXT NOT NULL,
+  routing_number INTEGER UNIQUE NOT NULL
+);
+
+-- TEST SUITE, DON'T TOUCH BELOW THIS LINE --
+
+/* PRAGMA TABLE_INFO('banks'); */
