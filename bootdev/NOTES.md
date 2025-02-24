@@ -90,3 +90,17 @@ REFERENCES departments(id): link the foreign field id from the departments table
 A database's schema describes how data is organized within it.
 
 Data types, table names, field names, constraints, and the relationships between all of those entities are part of a database's schema.
+
+# Relational Databases
+
+A relational database is a type of database that stores data so that it can be easily related to other data.
+
+In a relational database:
+
+1. Data is typically represented in "tables".
+
+2. Each table has "columns" or "fields" that hold attributes related to the record.
+
+3. Each row or entry in the table is called a record.
+
+4. Typically, each record has a unique Id called the primary key.
