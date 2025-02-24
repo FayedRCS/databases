@@ -4,23 +4,24 @@ An extensive document with useful notes about databases.
 # Contents:
 
 -[Primary Keys](#primary-keys)
+
 -[Foreign Keys](#foreign-keys)
+
 -[Schema](#schema)
 
 
 
 ---------------------
+Structured Query Language is the primary programming language used to manage and interact with relational databases.
 
-	Structured Query Language is the primary programming language used to manage and interact with relational databases.
-
-Useful operators:
+### Useful operators:
 
 	- SELECT is the most common operator in SQL (often referred to as a "query")
 	- ALTER is used to alter tables in our database. Often used to make changes without deletiong any data.
 
 
 
-SQL Data Types
+### SQL Data Types
 
 	SQl as a language can support many different data types. However, the datatypes that <strong>your</strong> database management system (DBMS) supports will vary depending on the specific database you're using.   
 
@@ -51,11 +52,12 @@ SQLite Data Type:
 
  Foreign keys are what makes relational databases relational! Foreign keys define the relationships between tables. Simply put, a FOREIGN KEY is a field in one table that references another table's PRIMARY KEY.
 
- # In SQLite
+ ### In SQLite
 
  Creating a FOREIGN KEY in SQLite happens at table creation! After we define the table fields and constraints we add a named CONSTRAINT where we define the FOREIGN KEY column and its REFERENCES:
 
- ```CREATE TABLE departments (
+ ```
+ CREATE TABLE departments (
     id INTEGER PRIMARY KEY,
     department_name TEXT NOT NULL
 );
@@ -67,7 +69,10 @@ CREATE TABLE employees (
     CONSTRAINT fk_departments
     FOREIGN KEY (department_id)
     REFERENCES departments(id)
-);```
+);
+
+```
+
 
 NOTE:
 
