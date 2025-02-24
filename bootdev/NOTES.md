@@ -9,6 +9,7 @@ An extensive document with useful notes about databases.
 
 -[Schema](#schema)
 
+-[Relational Databases](#relational-databases)
 
 
 ---------------------
@@ -104,3 +105,5 @@ In a relational database:
 3. Each row or entry in the table is called a record.
 
 4. Typically, each record has a unique Id called the primary key.
+
+The big difference between relational and non-relational databases is that non-relational databases nest their data. Instead of keeping records on separate tables, they store records within other records. This often results in duplicate data within the database.
