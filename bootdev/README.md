@@ -4,6 +4,11 @@ An extensive document with useful notes about databases.
 # Contents:
 
 -[Primary Keys](#primary-keys)
+-[Foreign Keys](#foreign-keys)
+
+
+
+---------------------
 
 	Structured Query Language is the primary programming language used to manage and interact with relational databases.
 
@@ -37,4 +42,38 @@ SQLite Data Type:
 
  A key defines and protects relationships between tables. A primary key is a special column that uniquely identifies records within a table. Each table can have one, and only one primary key.
 
- <strong>Your Primary Key Will Almost Always Be the “id”</strong>>
+ <strong>Your Primary Key Will Almost Always Be the “id”</strong>
+
+
+
+ ## Foreign keys
+
+ Foreign keys are what makes relational databases relational! Foreign keys define the relationships between tables. Simply put, a FOREIGN KEY is a field in one table that references another table's PRIMARY KEY.
+
+ # In SQLite
+
+ Creating a FOREIGN KEY in SQLite happens at table creation! After we define the table fields and constraints we add a named CONSTRAINT where we define the FOREIGN KEY column and its REFERENCES:
+
+ ```CREATE TABLE departments (
+    id INTEGER PRIMARY KEY,
+    department_name TEXT NOT NULL
+);
+
+CREATE TABLE employees (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    department_id INTEGER,
+    CONSTRAINT fk_departments
+    FOREIGN KEY (department_id)
+    REFERENCES departments(id)
+);```
+
+NOTE:
+
+In this example, an employee has a department_id. The department_id must be the same as the id field of a record from the departments table. fk_departments is the specified name of the constraint.
+
+CONSTRAINT fk_departments: create a constraint called fk_departments
+
+FOREIGN KEY (department_id): make this constraint a foreign key assigned to the department_id field
+
+REFERENCES departments(id): link the foreign field id from the departments table
