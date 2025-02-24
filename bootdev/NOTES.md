@@ -5,6 +5,7 @@ An extensive document with useful notes about databases.
 
 -[Primary Keys](#primary-keys)
 -[Foreign Keys](#foreign-keys)
+-[Schema](#schema)
 
 
 
@@ -77,3 +78,10 @@ CONSTRAINT fk_departments: create a constraint called fk_departments
 FOREIGN KEY (department_id): make this constraint a foreign key assigned to the department_id field
 
 REFERENCES departments(id): link the foreign field id from the departments table
+
+
+## Schema 
+
+A database's schema describes how data is organized within it.
+
+Data types, table names, field names, constraints, and the relationships between all of those entities are part of a database's schema.
