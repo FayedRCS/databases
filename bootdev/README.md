@@ -1,5 +1,10 @@
 An extensive document with useful notes about databases. 
 
+
+# Contents:
+
+-[Primary Keys](#primary-keys)
+
 	Structured Query Language is the primary programming language used to manage and interact with relational databases.
 
 Useful operators:
@@ -25,3 +30,11 @@ SQLite Data Type:
 	4. TEXT - Text string stored using database encoding such as UTF-8
 	5. BLOB - Short for Binary large object and typically used for images, audio or other multimedia.
 	6. BOOLEAN - Boolean values are written in SQLite queries as true or false, but are recorded as 1 or 0.
+
+
+
+## Primary keys
+
+ A key defines and protects relationships between tables. A primary key is a special column that uniquely identifies records within a table. Each table can have one, and only one primary key.
+
+ <strong>Your Primary Key Will Almost Always Be the “id”</strong>>
